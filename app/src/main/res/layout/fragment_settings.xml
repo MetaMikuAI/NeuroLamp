@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/blurred_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/rune_neuro_lamp_blurred"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rune_neuro_lamp_blurred"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="insideOverlay"
+        android:fillViewport="true"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="16dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/lava_lamp"
+                            android:contentDescription="@string/app_icon"
+                            android:layout_marginEnd="16dp"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="@string/neurolamp"
+                                android:textStyle="bold"
+                                android:textSize="24sp"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="@string/lava_lamp_controller"
+                                android:textSize="16sp"
+                                android:textColor="#CCCCCC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:contentDescription="@string/version"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666" />
+
+                        <TextView
+                            android:text="@string/label_version"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:text="@string/app_version"
+                            android:textSize="16sp"
+                            android:textColor="#666666"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_share"
+                            android:contentDescription="@string/github"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666"/>
+
+                        <TextView
+                            android:text="@string/label_github"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/metamiku"
+                        android:textSize="16sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:text="@string/github_url"
+                        android:autoLink="web"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_manage"
+                            android:contentDescription="@string/hardware_solution"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666"/>
+
+                        <TextView
+                            android:text="@string/hardware_solution"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/savanna"
+                        android:textSize="16sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:text="@string/savanna_bilibili_url"
+                        android:autoLink="web"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_gallery"
+                            android:contentDescription="@string/background_image"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666"/>
+
+                        <TextView
+                            android:text="@string/background_image"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/rune_artist"
+                        android:textSize="16sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:text="@string/rune_pixiv_url"
+                        android:autoLink="web"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="8dp" />
+
+                    <TextView
+                        android:text="@string/nico_gg"
+                        android:textSize="16sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/lava_lamp"
+                            android:contentDescription="@string/lava_lamp_pixel_art"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666"/>
+
+                        <TextView
+                            android:text="@string/lava_lamp_pixel_art"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/marisa_una"
+                        android:textSize="16sp"
+                        android:textColor="#CCCCCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:text="@string/marisa_una_bilibili_url"
+                        android:autoLink="web"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="8dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/placeholder_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="50dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:layout_gravity="top" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/blur_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/rune_neuro_lamp_blurred"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rune_neuro_lamp_blurred" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/search_circle_image"
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/neuro_searching"
+            android:scaleType="centerCrop"
+            android:src="@drawable/neuro_searching" />
+
+        <TextView
+            android:id="@+id/search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searching_for_lamp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/search_device_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_subtitle"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/search_found_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/found_device_default"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
+
+        <ProgressBar
+            android:id="@+id/search_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:indeterminateTint="@color/pink" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search_cancel_button"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textColor="@color/pink"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/pink"
+            app:strokeWidth="2dp"
+            app:cornerRadius="6dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    </LinearLayout>
+</FrameLayout>

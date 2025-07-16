@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/blur_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rune_neuro_lamp_blurred" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.skydoves.colorpickerview.ColorPickerView
+                android:id="@+id/colorPickerView"
+                android:layout_width="275dp"
+                android:layout_height="275dp"
+                android:layout_marginTop="32dp" />
+
+            <com.skydoves.colorpickerview.sliders.AlphaSlideBar
+                android:id="@+id/alphaSlideBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:selector_AlphaSlideBar="@drawable/slider_selector"
+                app:borderColor_AlphaSlideBar="@color/border"
+                app:borderSize_AlphaSlideBar="2" />
+
+            <TextView
+                android:id="@+id/hexColorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/ffffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:id="@+id/alias_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/alias"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/alias_edit_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:contentDescription="@string/edit_alias"
+                    android:padding="4dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/device_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textSize="14sp"
+                android:textColor="@color/grey"
+                android:layout_marginBottom="16dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/power"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+                <Switch
+                    android:id="@+id/power_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/mode_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textColor="@color/black"
+                android:gravity="center">
+                <RadioButton
+                    android:id="@+id/radio_specified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/specified"
+                    android:buttonTint="@color/pink"/>
+                <RadioButton
+                    android:id="@+id/radio_random"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/random"
+                    android:buttonTint="@color/pink" />
+                <RadioButton
+                    android:id="@+id/radio_api"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/api"
+                    android:buttonTint="@color/pink" />
+                <RadioButton
+                    android:id="@+id/radio_sync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sync"
+                    android:buttonTint="@color/pink" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/color_format"
+                    android:textSize="16sp"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/color_format_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/argb"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:padding="8dp" />
+                <ImageView
+                    android:id="@+id/color_format_help"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_help"
+                    android:contentDescription="@string/color_format_help"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
