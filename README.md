@@ -1,8 +1,11 @@
 # NeuroLamp
 
-> 软件: [@MetaMiku](https://github.com/MetaMikuAI)
+> 软件: [MetaMiku](https://github.com/MetaMikuAI)
+> 
 > 硬件: [萨瓦纳大草原](https://space.bilibili.com/34733445)
+> 
 > 背景图: [Rune](https://www.pixiv.net/users/25170019) & nicoGG（已获得 nicoGG 授权）
+> 
 > 熔岩灯像素画: [Marisa Una](https://space.bilibili.com/11156485)
 
 ## 🎬演示视频
