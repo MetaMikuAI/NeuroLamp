@@ -23,6 +23,9 @@ import android.os.Looper
 import android.util.Log
 import androidx.annotation.RequiresPermission
 import androidx.core.app.NotificationCompat
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class BleService : Service() {
 
@@ -160,9 +163,18 @@ class BleService : Service() {
 
     private val isLiveHandler = Handler(Looper.getMainLooper())
 
+    private fun hasApiModeConfig(): Boolean {
+        return allLampDevicesConfig.values.any { it.enabled && it.mode == DeviceMode.API }
+    }
+
     private val logRunnable = object : Runnable {
         @RequiresPermission(allOf = [Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT])
         override fun run() {
+            if (hasApiModeConfig()) {
+                CoroutineScope(Dispatchers.IO).launch {
+                    LampDeviceConfig.fetchApiColor()
+                }
+            }
             allLampDevicesConfig.forEach {
                 Log.d(TAG, "logRunnable: device=${it.value.serialize()}")
                 flushLampStatus(it.value)
@@ -324,6 +336,8 @@ class BleService : Service() {
 
         if (enabled && mode == DeviceMode.RANDOM) {
             color = generateRandomColor(extractAlphaByte(color))
+        } else if (enabled && mode == DeviceMode.API) {
+            color = LampDeviceConfig.apiColor
         }
         if (!enabled) {
             color = 0x00000000

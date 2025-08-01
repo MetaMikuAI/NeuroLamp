@@ -118,6 +118,57 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@android:drawable/ic_menu_edit"
+                            android:contentDescription="@string/color_api_url"
+                            android:layout_marginEnd="12dp"
+                            app:tint="#666666"/>
+
+                        <TextView
+                            android:text="@string/color_api_url"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edit_color_api_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="http://127.0.0.1:1219/example"
+                        android:text="http://127.0.0.1:1219/example"
+                        android:inputType="textUri"
+                        android:textColor="@color/white"
+                        android:textColorHint="#CCCCCC"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -177,7 +228,6 @@
                         android:padding="8dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -364,6 +414,7 @@
                         android:padding="8dp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <View
                 android:id="@+id/placeholder_overlay"

@@ -27,6 +27,7 @@
         android:roundIcon="@drawable/lava_lamp"
         android:supportsRtl="true"
         android:theme="@style/Theme.NeuroLamp"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <service
             android:name=".BleService"

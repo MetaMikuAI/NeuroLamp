@@ -46,4 +46,5 @@
     <string name="color_format_help">Color format help</string>
     <string name="app_icon">App Icon</string>
     <string name="version">Version</string>
+    <string name="color_api_url">Color API URL</string>
 </resources>
